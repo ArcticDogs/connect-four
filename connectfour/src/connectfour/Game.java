@@ -1,18 +1,19 @@
 //73 20 74 72 61 6e
-//Created: 2/24/28
-//Title: Connect 4
 
-package fieldtest;
+//Created: 2/24/28
+//Title: Connect Four
+
+package connectfour;
 
 import java.util.*;
-public class Arctic {
+public class Game {
 	
 int colOne, colTwo, colThree, colFour, colFive, colSix, colSeven;
 char[][] connectBoard;
 
 	public static void main(String[] args) {
 		
-		Arctic dogs = new Arctic();
+		Game dogs = new Game();
 		
 		dogs.startGame();
 		
@@ -151,8 +152,9 @@ char[][] connectBoard;
 					connectBoard[6 - colSeven][6] = 'O';
 				}
 				break;		
-		default: System.out.println("Entered invalid position.");
-				 System.exit(0);
+		default: scannerOne();
+				 System.out.println("Entered invalid position.");
+				 printBoard();
 				break;
 	
 		}
@@ -225,8 +227,10 @@ char[][] connectBoard;
 						connectBoard[6 - colSeven][6] = 'X';
 					}
 					break;		
-			default: System.out.println("Entered invalid position.");
-					 System.exit(0);
+			default: scannerTwo();
+					 System.out.println("Entered invalid position.");
+					 printBoard();
+
 					break;
 		}
 		
